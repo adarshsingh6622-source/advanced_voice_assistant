@@ -1,0 +1,75 @@
+# =========================
+# 🟢 Python cache
+# =========================
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# =========================
+# 🟢 Virtual Environment (VERY IMPORTANT)
+# =========================
+venv/
+ai_venv/
+env/
+ENV/
+
+# =========================
+# 🟢 System files
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# 🟢 VS Code / Editor
+# =========================
+.vscode/
+.idea/
+
+# =========================
+# 🟢 Logs
+# =========================
+*.log
+
+# =========================
+# 🟢 Streamlit cache
+# =========================
+.streamlit/
+
+# =========================
+# 🟢 Audio files (your voice recordings)
+# =========================
+*.mp3
+*.wav
+
+# =========================
+# 🟢 Model files (VERY HEAVY - DO NOT UPLOAD)
+# =========================
+*.bin
+*.pt
+*.pth
+*.model
+*.safetensors
+
+# =========================
+# 🟢 HuggingFace cache
+# =========================
+.cache/
+huggingface/
+
+# =========================
+# 🟢 Temporary files
+# =========================
+temp/
+tmp/
+*.tmp
+
+# =========================
+# 🟢 OS generated
+# =========================
+desktop.ini
+
+# =========================
+# 🟢 Environment variables (important)
+# =========================
+.env

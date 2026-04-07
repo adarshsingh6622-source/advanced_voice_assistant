@@ -1,0 +1,15 @@
+streamlit
+torch
+torchaudio
+transformers
+openai-whisper
+speechrecognition
+pyaudio
+gtts 
+sentence-transformers
+faiss-cpu
+numpy
+gradio
+openai
+python-dotenv
+requests

@@ -1,0 +1,8 @@
+[
+  {"text": "hello", "label": 0},
+  {"text": "hi", "label": 0},
+  {"text": "how are you", "label": 1},
+  {"text": "what is AI", "label": 2},
+  {"text": "play music", "label": 3},
+  {"text": "exit", "label": 4}
+]
