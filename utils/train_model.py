@@ -2,7 +2,7 @@ import torch
 import torch.nn as nn
 import json
 from sentence_transformers import SentenceTransformer
-from utils.deep_learning_model import IntentModel
+from deep_learning_model import IntentModel
 
 model = IntentModel()
 criterion = nn.CrossEntropyLoss()
@@ -20,7 +20,9 @@ embeddings = embedder.encode(texts)
 X = torch.tensor(embeddings).float()
 y = torch.tensor(labels)
 
-for epoch in range(50):
+epochs = 100
+
+for epoch in range(epochs):
     outputs = model(X)
     loss = criterion(outputs, y)
 
@@ -28,6 +30,10 @@ for epoch in range(50):
     loss.backward()
     optimizer.step()
 
-    print(f"Epoch {epoch}, Loss: {loss.item()}")
+    if (epoch+1) % 10 == 0:
+        _, predicted = torch.max(outputs, 1)
+        accuracy = (predicted == y).sum().item() / len(y)
+        print(f"Epoch {epoch+1}, Loss: {loss.item():.4f}, Accuracy: {accuracy:.2f}")
 
 torch.save(model.state_dict(), "models/intent_model.pth")
+print("Model trained & saved successfully")
